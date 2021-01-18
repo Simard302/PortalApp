@@ -4,6 +4,8 @@ from kivy.core.window import Window
 from kivy.uix.screenmanager import ScreenManager, Screen
 from data import UserDatabase
 from screen_format import build_string
+from main import Omnivox
+
 Window.size = (450, 500)
 
 
@@ -46,6 +48,16 @@ class Main(MDApp):
         print(email)
         print(password)
 
+    def pullOmnivoxAssignments(self, username, password):
+        session = Omnivox.startSession(username, password)
+        if not session:
+            print('Login Failed')
+            return
+        leaSession = session.startLeaSession()
+        leaSession.getAssignments()
+
+    def populateAssignments(self):
+        self.pullOmnivoxAssignments(self.OvxUsername, self.OvxPassword)
 
 if __name__ == "__main__":
     Main().run()

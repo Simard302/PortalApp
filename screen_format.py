@@ -7,14 +7,14 @@ ScreenManager:
     name: 'login'
     MDFloatLayout:
         MDLabel:
-            text: "Login"
+            text: "Welcome to Portal"
             pos_hint: {"center_y": .85}
             font_style: "H4"
             halign: "center"
             theme_text_color: "Custom"
             text_color: 0, 0, 0, 1
         MDLabel:
-            text: "Welcome to the Carpool experience!"
+            text: "Login"
             pos_hint: {"center_y": .70}
             font_style: "H6"
             halign: "center"
