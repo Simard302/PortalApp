@@ -1,5 +1,2 @@
-
-.idea/vcs.xml
-.idea/inspectionProfiles/profiles_settings.xml
-.idea/modules.xml
-.idea/PortalApp.iml
+.idea/
+__pycache__/
